@@ -123,9 +123,9 @@ public class Window {
     }
 
 
-/*
-Getters and Setters
-*/
+    /*
+    Getters and Setters
+    */
     public double getMouseX() {
         DoubleBuffer buffer = BufferUtils.createDoubleBuffer(1);
         GLFW.glfwGetCursorPos(window, buffer, null);
