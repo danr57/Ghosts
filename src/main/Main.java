@@ -20,7 +20,7 @@ public class Main {
         Renderer renderer = new Renderer();
 
         float[] vertices = {
-                -0.5f, 0.5f, -0f,    // v0
+                -0.5f, 0.5f, 0f,    // v0
                 -0.5f, -0.5f, 0f,   // v1
                 0.5f, -0.5f, 0f,    // v2
                 0.5f, 0.5f, 0f,     // v3

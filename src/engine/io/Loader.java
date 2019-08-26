@@ -13,12 +13,9 @@ import java.util.List;
 
 public class Loader {
 
-    //VAO and VBO arrays for efficient vertex handling
     private List<Integer> vaos = new ArrayList<Integer>();
     private List<Integer> vbos = new ArrayList<Integer>();
 
-
-    
     public Model loadToVAO(float[] positions, int[] indices) {
         int vaoID = createVAO();
         bindIndicesBuffer(indices);

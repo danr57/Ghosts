@@ -29,7 +29,6 @@ public class Window {
 
     }
 
-    //Creates a window if GLFW initialises correctly
     public void create() {
 
         if (!GLFW.glfwInit()) {
@@ -62,7 +61,6 @@ public class Window {
     public void stop() {
         GLFW.glfwTerminate();
     }
-
 
     public void update() {
         for (int i = 0; i < GLFW.GLFW_KEY_LAST; i++) {
