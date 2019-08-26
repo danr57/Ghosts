@@ -6,15 +6,17 @@ import org.lwjgl.opengl.GL30;
 
 public class Renderer {
 
+    //clears the screen and prepares the new render
     public void prepare() {
         GL11.glClearColor(1, 0, 0, 1);
         GL11.glClear(GL11.GL_COLOR_BUFFER_BIT);
     }
 
+    //renders the model
     public void render(Model model) {
         GL30.glBindVertexArray(model.getVaoID());
         GL20.glEnableVertexAttribArray(0);
-        GL11.glDrawArrays(GL11.GL_TRIANGLES, 0, model.getVertexCount());
+        GL11.glDrawElements(GL11.GL_TRIANGLES, model.getVertexCount(), GL11.GL_UNSIGNED_INT, 0);
         GL20.glDisableVertexAttribArray(0);
         GL30.glBindVertexArray(0);
     }

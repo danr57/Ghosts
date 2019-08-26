@@ -29,6 +29,7 @@ public class Window {
 
     }
 
+    //Creates a window if GLFW initialises correctly
     public void create() {
 
         if (!GLFW.glfwInit()) {
@@ -62,6 +63,7 @@ public class Window {
         GLFW.glfwTerminate();
     }
 
+
     public void update() {
         for (int i = 0; i < GLFW.GLFW_KEY_LAST; i++) {
             keys[i] = isKeyDown(i);
@@ -75,7 +77,7 @@ public class Window {
         GLFW.glfwPollEvents();
     }
 
-    // Gives us how much time has passed
+
     public boolean isUpdating() {
         double nextTime = getTime();
         double passedTime = nextTime - time;
